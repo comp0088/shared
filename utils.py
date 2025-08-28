@@ -135,7 +135,7 @@ def reshaped_apply(X, func):
     rewind = None
     if len(X.shape) > 2:
         rewind = X.shape[:-1]
-        X = X.reshape(np.product(rewind), X.shape[-1])
+        X = X.reshape(np.prod(rewind), X.shape[-1])
     
     y = func(X)
     
